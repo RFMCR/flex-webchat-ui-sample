@@ -115,6 +115,12 @@ import * as FlexWebChat from "@twilio/flex-webchat-ui";
 
 class App extends React.Component {
 
+  componentDidUpdate() {    
+    //FlexWebChat.Actions.invokeAction("ToggleChatVisibility");   
+    FlexWebChat.Actions.invokeAction("MinimizeChat");       
+}
+
+
   state = {};
 
   constructor(props) {
@@ -125,6 +131,8 @@ class App extends React.Component {
       .then(manager => this.setState({ manager }))
       .catch(error => this.setState({ error }));
   }
+
+  
 
   render() {
     const { manager, error } = this.state;

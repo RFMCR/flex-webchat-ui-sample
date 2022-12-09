@@ -30,7 +30,15 @@ var brandMessageBubbleColors = function (bgColor) {
 };
 
 var brandedColors = {
+    // MainContainer:{
+    //     width:'90%',
+    // },    
     Chat: {
+        MessagingCanvas:{         
+            Container:{
+                maxWidth:'100%'
+            }   
+        },
         MessageListItem: {
             FromOthers: brandMessageBubbleColors(brandColor2),
             FromMe: brandMessageBubbleColors(brandColor1),
@@ -58,7 +66,7 @@ var brandedColors = {
             fill: brandTextColor
         }
     },
-
+    
     EntryPoint: {
         Container: {
             background: personalizedColors.entryPointBackground,
@@ -79,3 +87,5 @@ var brandedColors = {
         }
     }
 };
+
+
